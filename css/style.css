@@ -32,9 +32,12 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+html, button, input, select, textarea { font-family: sans-serif; color: #FFF; }
 
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+body { margin: 0; font-size: 1em; line-height: 1.4; 
+  font-family: 'Merienda One', cursive;
+  background-color: #333;
+}
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -50,22 +53,14 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
    Links
    ========================================================================== */
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: #FFF; text-decoration: none; }
+a:visited { color: #FFF; }
+a:hover { color: #666; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active { outline: 0; }
 
-.content_wrapper{
-  text-align:center;
-}
-
-.imageBorder{
-  border:1px solid #ccc;
-  padding:4px;
-}
 /* =============================================================================
    Typography
    ========================================================================== */
@@ -225,6 +220,52 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
+/* =============================================================================
+   Index Page
+   ========================================================================== */
+.content_header{
+  text-align:center;
+  font-size:50px;
+  padding:10px;
+}
+
+a.header_link:hover{
+  color:#FFF;
+}
+
+.content_wrapper{
+  text-align:center;
+  margin-top:5px;
+}
+
+.imageBorder{
+  border:1px solid #777;
+  padding:4px;
+  background-color: #FFF;
+}
+
+.content_caption{
+  font-size:12px;
+  font-style:italic;
+}
+
+.content_footer{
+  margin:20px 15px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  font-size:10px;
+  text-align:center;
+}
+
+.footer_link_wrapper{
+  display:inline-block;
+  padding:5px;
+}
+
+
+
+
+
 
 
 
@@ -298,3 +339,10 @@ td { vertical-align: top; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+
+
+
+
+
+
