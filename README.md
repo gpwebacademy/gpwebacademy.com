@@ -1,4 +1,4 @@
 gpcodeassist.com
 ================
 
-The Website is: http://gpcodeassist.com/
+The Website is: http://gpwebacademy.com/
