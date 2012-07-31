@@ -34,7 +34,7 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 
 html, button, input, select, textarea { font-family: sans-serif; color: #FFF; }
 
-body { margin: 0; font-size: 1em; line-height: 1.4; 
+body { margin: 0; font-size: 1em; line-height: 1.4;
   font-family: 'Merienda One', cursive;
   background-color: #333;
 }
@@ -223,47 +223,49 @@ td { vertical-align: top; }
 /* =============================================================================
    Index Page
    ========================================================================== */
-.content_header{
-  text-align:center;
-  font-size:50px;
-  padding:10px;
+
+header {
+  text-align: center;
+  font-size: 50px;
+  padding: 10px;
 }
 
-a.header_link:hover{
-  color:#FFF;
+header a:hover {
+  color: #FFF;
 }
 
-.content_wrapper{
-  text-align:center;
-  margin-top:5px;
+.content-wrapper {
+  text-align: center;
+  margin-top: 5px;
 }
 
-.imageBorder{
-  border:1px solid #777;
-  padding:4px;
+.image-border {
+  border: 1px solid #777;
+  padding: 4px;
   background-color: #FFF;
 }
 
-.content_caption{
-  font-size:12px;
-  font-style:italic;
+.content-caption {
+  font-size: 12px;
+  font-style: italic;
 }
 
-.content_footer{
-  margin:20px 15px;
-  border-top:1px solid #ccc;
-  border-bottom:1px solid #ccc;
-  font-size:10px;
-  text-align:center;
+footer {
+  margin: 20px 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 10px;
+  text-align: center;
 }
 
-.footer_link_wrapper{
-  display:inline-block;
-  padding:5px;
+footer ul {
+  list-style: none;
 }
 
-
-
+footer li {
+  display: inline-block;
+  padding: 5px;
+}
 
 
 
@@ -339,10 +341,3 @@ a.header_link:hover{
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-
-
-
-
-
-
-
