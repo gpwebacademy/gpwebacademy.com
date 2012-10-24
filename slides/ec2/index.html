@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EC2 | GP Web Academy</title>
+
+		<meta name="description" content="An introduction to getting up and
+			running on Amazon EC2.">
+		<meta name="author" content="Trevor Olson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script>
+			// If the query includes 'print-pdf' we'll use the PDF print sheet
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Amazon EC2</h1>
+					<h3>Guide to getting started</h3>
+				</section>
+
+				<section>
+					<section>
+						<h1>EC Who?</h1>
+					</section>
+
+
+					<section>
+						<h2>Amazon Elastic Compute Cloud</h2>
+						<p><a href="http://aws.amazon.com/ec2/" target="_blank">aws.amazon.com/ec2/</a></p>
+					</section>
+
+					<section>
+						<h2>Used by many:</h2>
+						<ul>
+							<li><a href="http://www.reddit.com/" target="_blank">Reddit</a></li>
+							<li><a href="http://www.netflix.com/" target="_blank">Netflix</a></li>
+							<li><a href="https://www.dropbox.com/" target="_blank">DropBox</a></li>
+							<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
+							<li><a href="http://pinterest.com/" target="_blank">Pinterest</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Lets Get Started</h2>
+						<p><a href="https://console.aws.amazon.com/ec2/home" target="_blank">console.aws.amazon.com/ec2/</a></p>
+					</section>
+
+					<section>
+						<h2>OS: Ubuntu</h2>
+						<p>
+							<a href="http://www.ubuntu.com/">Ubuntu</a> is a easy
+							to use linux distro with everything you need to get
+							started.
+						</p>
+					</section>
+
+					<section>
+						<h2>Instance Type: Micro</h2>
+						<p>
+							Enough to get you started and <strong>free</strong>
+							for a year!
+						</p>
+					</section>
+
+					<section>
+						<h2>Key Pair</h2>
+						<p>Create your <code>.ssh</code> directory:</p>
+						<pre><code class="bash">
+$ mkdir ~/.ssh
+$ chmod 700 ~/.ssh
+						</code></pre>
+
+						<p>Copy over your key and set its permissions:</p>
+						<pre><code class="bash">
+$ cp ~/Downloads/mykey.pem ~/.ssh/
+$ chmod 600 ~/.ssh/*
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Security</h2>
+						<p>Allow access to these ports:</p>
+						<ul>
+							<li>22 (SSH)</li>
+							<li>80 (HTTP)</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Login</h2>
+						<pre><code class="bash">
+$ ssh -i ~/.ssh/mykey.pem ubuntu@1234.amazonaws.com
+						</code></pre>
+						<p>
+							Click on your new instance to find the "Public DNS".
+							This is where you will ssh into using your new key.
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Download All The Softwares!</h2>
+						<p>
+							Most of what you'll need can be found at the super
+							helpful <a href="https://help.ubuntu.com/12.10/serverguide/index.html">
+							Ubuntu Server Guide</a>
+						</p>
+					</section>
+
+					<section>
+						<h2>Apache (httpd)</h2>
+						<pre><code class="bash">
+$ sudo apt-get install apache2
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>PHP</h2>
+						<pre><code class="bash">
+$ sudo apt-get install php5 libapache2-mod-php5 php5-mysql
+$ sudo service apache2 restart
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>MySQL</h2>
+						<pre><code class="bash">
+$ sudo apt-get install mysql-server
+						</code></pre>
+						<p>
+							Choose a password for the MySQL root user.<br>
+							(Remember this!)
+						</p>
+					</section>
+
+					<section>
+						<h2>git</h2>
+						<pre><code class="bash">
+$ sudo apt-get install git
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Deploy!</h2>
+						<pre><code class="bash">
+$ cd /var/www
+$ sudo git clone https://github.com/gpwebacademy/gpwebacademy.com.git .
+						</code></pre>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+					<br>
+					<h3>Trevor Olson</h3>
+					<p><a href="https://twitter.com/ZombieFeynman">@ZombieFeynman</a></p>
+					<p><a href="http://heytrevor.com/">heytrevor.com</a></p>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme || 'sky', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
